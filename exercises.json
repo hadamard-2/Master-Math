@@ -1,0 +1,17 @@
+{
+    "quizzes": [
+        {
+            "title": "Basics Quiz",
+            "questions": [
+                {
+                    "question": "What is the purpose of cryptography?",
+                    "options": [
+                        "To secure communication",
+                        "To create data"
+                    ],
+                    "answer": 0
+                }
+            ]
+        }
+    ]
+}

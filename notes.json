@@ -1,0 +1,19 @@
+{
+    "notes": [
+        {
+            "id": "note1",
+            "title": "Introduction to Cryptography",
+            "content": "Cryptography is the study of securing information."
+        },
+        {
+            "id": "note2",
+            "title": "Encryption Basics",
+            "content": "Encryption transforms data into a secure format."
+        },
+        {
+            "id": "note3",
+            "title": "History of Cryptography",
+            "content": "Cryptography has been used for secure communication since ancient times."
+        }
+    ]
+}
