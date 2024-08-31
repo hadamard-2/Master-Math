@@ -1,40 +1,40 @@
 % Grade 9 Dependencies
-prerequisite('Solving Equations', 'The Number System').
-prerequisite('Solving Inequalities', 'The Number System').
-prerequisite('Solving Inequalities', 'Solving Equations').
-prerequisite('Introduction to Trigonometry', 'The Number System').
-prerequisite('Introduction to Trigonometry', 'Solving Equations').
-prerequisite('Introduction to Trigonometry', 'Vectors in Two Dimensions').
-prerequisite('Congruency and Similarity', 'Regular Polygons').
-prerequisite('Vectors in Two Dimensions', 'The Number System').
-prerequisite('Statistics and Probability', 'The Number System').
-prerequisite('Statistics and Probability', 'Solving Equations').
+requires('Solving Equations', 'The Number System').
+requires('Solving Inequalities', 'The Number System').
+requires('Solving Inequalities', 'Solving Equations').
+requires('Introduction to Trigonometry', 'The Number System').
+requires('Introduction to Trigonometry', 'Solving Equations').
+requires('Introduction to Trigonometry', 'Vectors in Two Dimensions').
+requires('Congruency and Similarity', 'Regular Polygons').
+requires('Vectors in Two Dimensions', 'The Number System').
+requires('Statistics and Probability', 'The Number System').
+requires('Statistics and Probability', 'Solving Equations').
 
 % Grade 10 Dependencies
-prerequisite('Polynomials Functions', 'Relations and Functions').
-prerequisite('Exponential and Logarithmic Functions', 'Relations and Functions').
-prerequisite('Trigonometric Functions', 'Introduction to Trigonometry').
-prerequisite('Trigonometric Functions', 'Relations and Functions').
-prerequisite('Circles', 'Congruency and Similarity').
-prerequisite('Solid Figures', 'Congruency and Similarity').
-prerequisite('Solid Figures', 'Regular Polygons').
-prerequisite('Coordinate Geometry', 'Relations and Functions').
-prerequisite('Coordinate Geometry', 'Circles').
+requires('Polynomials Functions', 'Relations and Functions').
+requires('Exponential and Logarithmic Functions', 'Relations and Functions').
+requires('Trigonometric Functions', 'Introduction to Trigonometry').
+requires('Trigonometric Functions', 'Relations and Functions').
+requires('Circles', 'Congruency and Similarity').
+requires('Solid Figures', 'Congruency and Similarity').
+requires('Solid Figures', 'Regular Polygons').
+requires('Coordinate Geometry', 'Relations and Functions').
+requires('Coordinate Geometry', 'Circles').
 
 % Grade 11 Dependencies
-prerequisite('Rational Expressions and Rational Functions', 'Polynomials Functions').
-prerequisite('Matrices', 'Vectors').
-prerequisite('Matrices', 'Relations and Functions').
-prerequisite('Determinants and Their Properties', 'Matrices').
-prerequisite('Transformations of the Plane', 'Congruency and Similarity').
-prerequisite('Transformations of the Plane', 'Matrices').
-prerequisite('Statistics', 'Statistics and Probability').
-prerequisite('Probability', 'Statistics and Probability').
+requires('Rational Expressions and Rational Functions', 'Polynomials Functions').
+requires('Matrices', 'Vectors').
+requires('Matrices', 'Relations and Functions').
+requires('Determinants and Their Properties', 'Matrices').
+requires('Transformations of the Plane', 'Congruency and Similarity').
+requires('Transformations of the Plane', 'Matrices').
+requires('Statistics', 'Statistics and Probability').
+requires('Probability', 'Statistics and Probability').
 
 % Grade 12 Dependencies
-prerequisite('Introduction to Calculus', 'Sequences and Series').
-prerequisite('Introduction to Calculus', 'Trigonometric Functions').
-prerequisite('Introduction to Linear Programming', 'Introduction to Calculus').
-prerequisite('Mathematical Applications in Business', 'Relations and Functions').
-prerequisite('Mathematical Applications in Business', 'Introduction to Linear Programming').
-prerequisite('Mathematical Applications in Business', 'Statistics').
+requires('Introduction to Calculus', 'Sequences and Series').
+requires('Introduction to Calculus', 'Trigonometric Functions').
+requires('Introduction to Linear Programming', 'Introduction to Calculus').
+requires('Mathematical Applications in Business', 'Relations and Functions').
+requires('Mathematical Applications in Business', 'Introduction to Linear Programming').
+requires('Mathematical Applications in Business', 'Statistics').

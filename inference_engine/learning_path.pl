@@ -1,12 +1,23 @@
 :- consult('../knowledge_base/module_dependency.pl').
 :- consult('../knowledge_base/student_progress.pl').
 
+% Define a predicate to list all known modules without duplicates
+module(Module) :-
+    requires(Module, _).
+module(Module) :-
+    requires(_, Module).
+
+% List all unique modules
+list_all_modules(Modules) :-
+    setof(Module, module(Module), Modules).
+
+% Predicate to check if a module is foundational and exists in the knowledge base
+foundational_module(Module) :-
+    module(Module),
+    \+ requires(Module, _).
+
 % Define the mastery threshold for unlocking modules
 unlock_threshold(70).
-
-% Foundational modules: Modules with no prerequisites (dependencies)
-foundational_module(Module) :-
-    \+ requires(Module, _).
 
 % Rule to check if a module is unlocked based on its prerequisites
 module_unlocked(Module) :-
@@ -18,6 +29,9 @@ module_unlocked(Module) :-
                 MasteryLevel >= Threshold))
     ).
 
-% Query to find all currently unlocked modules
+% Query to find all currently unlocked modules without duplicates
 unlocked_modules(Modules) :-
-    findall(Module, module_unlocked(Module), Modules).
+    setof(Module, module_unlocked(Module), Modules).
+
+
+
