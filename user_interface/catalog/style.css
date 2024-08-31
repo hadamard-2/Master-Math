@@ -1,0 +1,96 @@
+body {
+    font-family: "Manrope";
+    font-weight: 500;
+
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-family: "Bai Jamjuree";
+
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#catalog {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-nav {
+    display: flex;
+    background-color: #3498db;
+}
+
+.tab-nav button {
+    font-family: "Manrope";
+    font-weight: 500;
+
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-nav button:hover,
+.tab-nav button.active {
+    background-color: #2980b9;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.grade-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.module-card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.module-card .color-block {
+    height: 80px;
+}
+
+.module-card .module-title {
+    padding: 10px;
+    font-size: 0.9em;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
