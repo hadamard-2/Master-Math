@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('http://localhost:5000/unlocked_modules')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Unlocked Modules:', data.modules);
+        })
+        .catch(error => console.error('Error:', error));
+});
+
+
 const modules = {
     "Grade 9": [
         "Further on Sets",
