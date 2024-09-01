@@ -1,13 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://localhost:5000/unlocked_modules')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Unlocked Modules:', data.modules);
-        })
-        .catch(error => console.error('Error:', error));
-});
-
-
 const modules = {
     "Grade 9": [
         "Further on Sets",
@@ -48,56 +38,141 @@ const modules = {
     ]
 };
 
-const brightColors = [
-    '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A',
-    '#98D8C8', '#F7DC6F', '#BB8FCE', '#82E0AA',
-    '#F1948A', '#85C1E9', '#F8C471', '#73C6B6'
+const mathColors = [
+    "#FF6B6B", // Red
+    "#4ECDC4", // Teal
+    "#45B7D1", // Sky Blue
+    "#FFA07A", // Orange
+    "#98D8C8", // Light Green
+    "#F7DC6F", // Yellow
+    "#BB8FCE", // Purple
+    "#82E0AA", // Lime Green
+    "#F1948A", // Salmon Pink
+    "#85C1E9", // Light Blue
+    "#F8C471", // Gold
+    "#73C6B6" // Sea Green
 ];
 
 function getRandomBrightColor() {
-    return brightColors[Math.floor(Math.random() * brightColors.length)];
+    return mathColors[Math.floor(Math.random() * mathColors.length)];
 }
 
-function renderTabs() {
+const API_BASE_URL = 'http://localhost:5000';
+
+async function fetchUnlockedModules() {
+    const response = await fetch(`${API_BASE_URL}/api/unlocked_modules`);
+    const data = await response.json();
+    return data.modules || [];
+}
+
+async function fetchPrerequisites(courseName) {
+    const response = await fetch(`${API_BASE_URL}/api/prerequisites/${courseName}`);
+    const data = await response.json();
+    return data.prerequisites || [];
+}
+
+function createTabButton(grade, index) {
+    const tabButton = document.createElement('button');
+    tabButton.textContent = grade;
+    tabButton.addEventListener('click', () => activateTab(grade));
+
+    if (index === 0) {
+        tabButton.classList.add('active');
+    }
+
+    return tabButton;
+}
+
+function createModuleCard(module, unlockedModules) {
+    const moduleCard = document.createElement('div');
+    moduleCard.className = 'module-card';
+
+    // Determine whether the module is unlocked
+    const isUnlocked = unlockedModules.includes(module);
+
+    // Construct the inner HTML based on whether the module is unlocked
+    moduleCard.innerHTML = `
+        <div class="color-block" style="background-color: ${getRandomBrightColor()};">
+            ${isUnlocked ? '' : '<span class="material-symbols-rounded">lock</span>'}
+        </div>
+        <div class="module-title">${module}</div>
+    `;
+
+    // Add event listener based on module unlock status
+    if (isUnlocked) {
+        moduleCard.addEventListener('click', () => {
+            window.location.href = '../content/index.html';
+        });
+    } else {
+        moduleCard.addEventListener('click', async () => {
+            const prerequisites = await fetchPrerequisites(module.replace(/\s+/g, '_').toLowerCase());
+            alert(`To unlock this module, complete the following modules first:\n• ${prerequisites.join('\n• ')}`);
+        });
+    }
+
+    return moduleCard;
+}
+
+function createTabPane(grade, index) {
+    const tabPane = document.createElement('div');
+    tabPane.className = 'tab-content';
+    tabPane.id = grade.replace(' ', '');
+
+    const moduleGrid = document.createElement('div');
+    moduleGrid.className = 'grade-section';
+
+    modules[grade].forEach((module) => {
+        const moduleCard = createModuleCard(module);
+        moduleGrid.appendChild(moduleCard);
+    });
+
+    tabPane.appendChild(moduleGrid);
+
+    if (index === 0) {
+        tabPane.classList.add('active');
+    }
+
+    return tabPane;
+}
+
+async function renderTabs() {
     const tabNav = document.getElementById('tabNav');
     const tabContent = document.getElementById('tabContent');
 
+    const unlockedModules = await fetchUnlockedModules();
+
     Object.keys(modules).forEach((grade, index) => {
-        // Create tab button
-        const tabButton = document.createElement('button');
-        tabButton.textContent = grade;
-        tabButton.addEventListener('click', () => activateTab(grade));
+        const tabButton = createTabButton(grade, index);
         tabNav.appendChild(tabButton);
 
-        // Create tab content
-        const tabPane = document.createElement('div');
-        tabPane.className = 'tab-content';
-        tabPane.id = grade.replace(' ', '');
-
-        const moduleGrid = document.createElement('div');
-        moduleGrid.className = 'grade-section';
-
-        modules[grade].forEach((module) => {
-            const moduleCard = document.createElement('div');
-            moduleCard.className = 'module-card';
-            moduleCard.innerHTML = `
-                <div class="color-block" style="background-color: ${getRandomBrightColor()};"></div>
-                <div class="module-title">${module}</div>
-            `;
-            moduleCard.addEventListener('click', () => alert(`You clicked on ${module}`));
-            moduleGrid.appendChild(moduleCard);
-        });
-
-        tabPane.appendChild(moduleGrid);
+        const tabPane = createTabPane(grade, index, unlockedModules);
         tabContent.appendChild(tabPane);
-
-        // Activate the first tab by default
-        if (index === 0) {
-            tabButton.classList.add('active');
-            tabPane.classList.add('active');
-        }
     });
 }
+
+function createTabPane(grade, index, unlockedModules) {
+    const tabPane = document.createElement('div');
+    tabPane.className = 'tab-content';
+    tabPane.id = grade.replace(' ', '');
+
+    const moduleGrid = document.createElement('div');
+    moduleGrid.className = 'grade-section';
+
+    modules[grade].forEach((module) => {
+        const moduleCard = createModuleCard(module, unlockedModules);
+        moduleGrid.appendChild(moduleCard);
+    });
+
+    tabPane.appendChild(moduleGrid);
+
+    if (index === 0) {
+        tabPane.classList.add('active');
+    }
+
+    return tabPane;
+}
+
+
 
 function activateTab(grade) {
     // Deactivate all tabs

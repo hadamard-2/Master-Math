@@ -11,7 +11,7 @@ requires('Statistics and Probability', 'The Number System').
 requires('Statistics and Probability', 'Solving Equations').
 
 % Grade 10 Dependencies
-requires('Polynomials Functions', 'Relations and Functions').
+requires('Polynomial Functions', 'Relations and Functions').
 requires('Exponential and Logarithmic Functions', 'Relations and Functions').
 requires('Trigonometric Functions', 'Introduction to Trigonometry').
 requires('Trigonometric Functions', 'Relations and Functions').
@@ -22,7 +22,7 @@ requires('Coordinate Geometry', 'Relations and Functions').
 requires('Coordinate Geometry', 'Circles').
 
 % Grade 11 Dependencies
-requires('Rational Expressions and Rational Functions', 'Polynomials Functions').
+requires('Rational Expressions and Rational Functions', 'Polynomial Functions').
 requires('Matrices', 'Vectors').
 requires('Matrices', 'Relations and Functions').
 requires('Determinants and Their Properties', 'Matrices').
