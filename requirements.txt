@@ -1,0 +1,10 @@
+blinker==1.8.2
+click==8.1.7
+colorama==0.4.6
+Flask==3.0.3
+Flask-Cors==5.0.0
+itsdangerous==2.2.0
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+pyswip @ git+https://github.com/yuce/pyswip@57ad6db3ef392a2ad1ee5fb6b17418a8e325b38f
+Werkzeug==3.0.4

@@ -62,6 +62,23 @@ def get_prerequisites(course_name):
         return jsonify({"prerequisites": prerequisites})
     return jsonify({"prerequisites": []})
 
+@app.route("/api/update_mastery_level", methods=["POST"])
+def update_mastery_level():
+    data = request.json
+    module_name = data.get("module_name")
+    new_level = data.get("mastery_level")
+
+    if not module_name or new_level is None:
+        return jsonify({"error": "Invalid data provided"}), 400
+
+    # Call Prolog to update the mastery level
+    prolog_query = f"update_mastery_level('{capitalize_course_name(module_name)}', {new_level})"
+    result = list(prolog.query(prolog_query))
+
+    if result:
+        return jsonify({"status": "success"}), 200
+    return jsonify({"error": "Failed to update mastery level"}), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)
