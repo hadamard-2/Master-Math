@@ -2,30 +2,82 @@ const data = {
     notes: [
         {
             id: "note1",
-            title: "Introduction to Cryptography",
-            content: "Cryptography is the study of securing information."
+            title: "Introduction to Calculus",
+            content: "Calculus is the mathematical study of change, rates of change, and functions."
         },
         {
             id: "note2",
-            title: "Encryption Basics",
-            content: "Encryption transforms data into a secure format."
+            title: "Limits",
+            content: "A limit is the value that a function approaches as the input approaches a certain value."
         },
         {
             id: "note3",
-            title: "History of Cryptography",
-            content: "Cryptography has been used for secure communication since ancient times."
-        }
+            title: "Derivatives",
+            content: "A derivative is the rate of change of a function at a particular point."
+        },
+        {
+            id: "note4",
+            title: "Integrals",
+            content: "An integral is the area under the curve of a function."
+        },
     ],
     exercises: [
         {
-            title: "Basics Quiz",
+            title: "Limits Quiz",
             questions: [
                 {
-                    question: "What is the purpose of cryptography?",
-                    options: [
-                        "To secure communication",
-                        "To create data"
-                    ],
+                    question: "What is the limit of x as x approaches 2?",
+                    options: ["1", "2", "3"],
+                    answer: 1
+                },
+                {
+                    question: "What is the limit of (x^2 - 4)/(x - 2) as x approaches 2?",
+                    options: ["0", "2", "4"],
+                    answer: 2
+                },
+                {
+                    question: "What is the limit of 1/x as x approaches 0?",
+                    options: ["0", "infinity", "undefined"],
+                    answer: 2
+                }
+            ]
+        },
+        {
+            title: "Derivatives Quiz",
+            questions: [
+                {
+                    question: "What is the derivative of x^2?",
+                    options: ["2x", "x^2", "x"],
+                    answer: 0
+                },
+                {
+                    question: "What is the derivative of sin(x)?",
+                    options: ["cos(x)", "sin(x)", "-cos(x)"],
+                    answer: 1
+                },
+                {
+                    question: "What is the derivative of e^x?",
+                    options: ["e^x", "x", "1/e^x"],
+                    answer: 0
+                }
+            ]
+        },
+        {
+            title: "Integrals Quiz",
+            questions: [
+                {
+                    question: "What is the integral of x^2?",
+                    options: ["x^3/3", "2x", "x^2/2"],
+                    answer: 0
+                },
+                {
+                    question: "What is the integral of cos(x)?",
+                    options: ["sin(x)", "-sin(x)", "cos(x)"],
+                    answer: 1
+                },
+                {
+                    question: "What is the integral of e^x?",
+                    options: ["e^x", "x", "1/e^x"],
                     answer: 0
                 }
             ]

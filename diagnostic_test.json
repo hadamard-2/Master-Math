@@ -1,0 +1,464 @@
+{
+    "exercises": [
+        {
+            "title": "Grade 9 Math Quiz",
+            "questions": [
+                {
+                    "question": "What is the intersection of sets A = {1, 2, 3, 4} and B = {3, 4, 5, 6}?",
+                    "options": [
+                        "{3, 4}",
+                        "{1, 2, 5, 6}",
+                        "{1, 2, 3, 4, 5, 6}",
+                        "∅ (empty set)"
+                    ],
+                    "answer": 0,
+                    "topic": "Further on Sets"
+                },
+                {
+                    "question": "Which of the following is an irrational number?",
+                    "options": [
+                        "0.75",
+                        "√2",
+                        "-3",
+                        "22/7"
+                    ],
+                    "answer": 1,
+                    "topic": "The Number System"
+                },
+                {
+                    "question": "Solve for x: 2x + 5 = 15",
+                    "options": [
+                        "x = 5",
+                        "x = 10",
+                        "x = 7.5",
+                        "x = 6"
+                    ],
+                    "answer": 0,
+                    "topic": "Solving Equations"
+                },
+                {
+                    "question": "Which inequality represents 'x is less than or equal to 7'?",
+                    "options": [
+                        "x < 7",
+                        "x > 7",
+                        "x ≤ 7",
+                        "x ≥ 7"
+                    ],
+                    "answer": 2,
+                    "topic": "Solving Inequalities"
+                },
+                {
+                    "question": "In a right-angled triangle, which trigonometric ratio is equal to the opposite side divided by the hypotenuse?",
+                    "options": [
+                        "Sine",
+                        "Cosine",
+                        "Tangent",
+                        "Secant"
+                    ],
+                    "answer": 0,
+                    "topic": "Introduction to Trigonometry"
+                },
+                {
+                    "question": "How many sides does a regular octagon have?",
+                    "options": [
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "answer": 2,
+                    "topic": "Regular Polygons"
+                },
+                {
+                    "question": "Which of the following is a sufficient condition for two triangles to be congruent?",
+                    "options": [
+                        "AAA (Angle-Angle-Angle)",
+                        "SAS (Side-Angle-Side)",
+                        "SSA (Side-Side-Angle)",
+                        "AAS (Angle-Angle-Side)"
+                    ],
+                    "answer": 1,
+                    "topic": "Congruency and Similarity"
+                },
+                {
+                    "question": "What is the magnitude of the vector (3, 4)?",
+                    "options": [
+                        "5",
+                        "7",
+                        "1",
+                        "25"
+                    ],
+                    "answer": 0,
+                    "topic": "Vectors in Two Dimensions"
+                },
+                {
+                    "question": "Which measure of central tendency is most affected by outliers?",
+                    "options": [
+                        "Mean",
+                        "Median",
+                        "Mode",
+                        "Range"
+                    ],
+                    "answer": 0,
+                    "topic": "Statistics and Probability"
+                },
+                {
+                    "question": "If you flip a fair coin twice, what is the probability of getting two heads?",
+                    "options": [
+                        "1/4",
+                        "1/2",
+                        "3/4",
+                        "1"
+                    ],
+                    "answer": 0,
+                    "topic": "Statistics and Probability"
+                }
+            ]
+        },
+        {
+            "title": "Grade 10 Math Quiz",
+            "questions": [
+                {
+                    "question": "Which of the following is not a function?",
+                    "options": [
+                        "y = x^2",
+                        "y = |x|",
+                        "x^2 + y^2 = 1",
+                        "y = 2x + 3"
+                    ],
+                    "answer": 2,
+                    "topic": "Relations and Functions"
+                },
+                {
+                    "question": "What is the degree of the polynomial 3x^4 - 2x^2 + 5x - 1?",
+                    "options": [
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "answer": 2,
+                    "topic": "Polynomials Functions"
+                },
+                {
+                    "question": "What is the base of the exponential function f(x) = 2^x?",
+                    "options": [
+                        "e",
+                        "2",
+                        "10",
+                        "x"
+                    ],
+                    "answer": 1,
+                    "topic": "Exponential and Logarithmic Functions"
+                },
+                {
+                    "question": "What is the period of the function f(x) = sin(2x)?",
+                    "options": [
+                        "π",
+                        "2π",
+                        "π/2",
+                        "4π"
+                    ],
+                    "answer": 0,
+                    "topic": "Trigonometric Functions"
+                },
+                {
+                    "question": "What is the equation of a circle with center (0, 0) and radius 5?",
+                    "options": [
+                        "x^2 + y^2 = 25",
+                        "x^2 + y^2 = 5",
+                        "(x-5)^2 + (y-5)^2 = 25",
+                        "x^2 - y^2 = 25"
+                    ],
+                    "answer": 0,
+                    "topic": "Circles"
+                },
+                {
+                    "question": "What is the volume of a sphere with radius r?",
+                    "options": [
+                        "4πr^2",
+                        "πr^2",
+                        "4/3πr^3",
+                        "2πr"
+                    ],
+                    "answer": 2,
+                    "topic": "Solid Figures"
+                },
+                {
+                    "question": "What is the slope of the line passing through points (1, 2) and (4, 8)?",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    "answer": 1,
+                    "topic": "Coordinate Geometry"
+                },
+                {
+                    "question": "Which of the following is the equation of a line parallel to y = 3x + 2?",
+                    "options": [
+                        "y = -1/3x + 5",
+                        "y = 3x - 1",
+                        "y = -3x + 4",
+                        "y = x + 3"
+                    ],
+                    "answer": 1,
+                    "topic": "Coordinate Geometry"
+                },
+                {
+                    "question": "What is the midpoint of the line segment with endpoints (2, 3) and (6, 7)?",
+                    "options": [
+                        "(4, 5)",
+                        "(3, 4)",
+                        "(8, 10)",
+                        "(2, 2)"
+                    ],
+                    "answer": 0,
+                    "topic": "Coordinate Geometry"
+                },
+                {
+                    "question": "What is the distance between points (0, 0) and (3, 4)?",
+                    "options": [
+                        "3",
+                        "4",
+                        "5",
+                        "7"
+                    ],
+                    "answer": 2,
+                    "topic": "Coordinate Geometry"
+                }
+            ]
+        },
+        {
+            "title": "Grade 11 Math Quiz",
+            "questions": [
+                {
+                    "question": "Which of the following is an example of a one-to-one function?",
+                    "options": [
+                        "f(x) = x^2",
+                        "f(x) = x^3",
+                        "f(x) = |x|",
+                        "f(x) = 1/x"
+                    ],
+                    "answer": 1,
+                    "topic": "Relations and Functions"
+                },
+                {
+                    "question": "What is the domain of the rational function f(x) = 1 / (x - 2)?",
+                    "options": [
+                        "All real numbers",
+                        "All real numbers except 2",
+                        "All real numbers except 0",
+                        "All positive real numbers"
+                    ],
+                    "answer": 1,
+                    "topic": "Rational Expressions and Rational Functions"
+                },
+                {
+                    "question": "What is the order of the matrix [[1, 2], [3, 4], [5, 6]]?",
+                    "options": [
+                        "2x3",
+                        "3x2",
+                        "2x2",
+                        "3x3"
+                    ],
+                    "answer": 1,
+                    "topic": "Matrices"
+                },
+                {
+                    "question": "What is the determinant of the matrix [[2, 1], [4, 3]]?",
+                    "options": [
+                        "2",
+                        "5",
+                        "6",
+                        "10"
+                    ],
+                    "answer": 0,
+                    "topic": "Determinants and Their Properties"
+                },
+                {
+                    "question": "What is the dot product of vectors a = (1, 2, 3) and b = (4, 5, 6)?",
+                    "options": [
+                        "14",
+                        "32",
+                        "21",
+                        "6"
+                    ],
+                    "answer": 1,
+                    "topic": "Vectors"
+                },
+                {
+                    "question": "Which transformation preserves the size and shape of a figure?",
+                    "options": [
+                        "Dilation",
+                        "Reflection",
+                        "Rotation",
+                        "Shear"
+                    ],
+                    "answer": 2,
+                    "topic": "Transformations of the Plane"
+                },
+                {
+                    "question": "What is the standard deviation of the dataset {1, 2, 3, 4, 5}?",
+                    "options": [
+                        "1.41",
+                        "2",
+                        "2.5",
+                        "3"
+                    ],
+                    "answer": 0,
+                    "topic": "Statistics"
+                },
+                {
+                    "question": "In a normal distribution, approximately what percentage of data falls within one standard deviation of the mean?",
+                    "options": [
+                        "50%",
+                        "68%",
+                        "95%",
+                        "99.7%"
+                    ],
+                    "answer": 1,
+                    "topic": "Statistics"
+                },
+                {
+                    "question": "What is the probability of drawing a king from a standard deck of 52 cards?",
+                    "options": [
+                        "1/13",
+                        "1/4",
+                        "4/52",
+                        "1/26"
+                    ],
+                    "answer": 0,
+                    "topic": "Probability"
+                },
+                {
+                    "question": "If P(A) = 0.3 and P(B) = 0.4, and A and B are independent events, what is P(A and B)?",
+                    "options": [
+                        "0.12",
+                        "0.7",
+                        "0.1",
+                        "0.3"
+                    ],
+                    "answer": 0,
+                    "topic": "Probability"
+                }
+            ]
+        },
+        {
+            "title": "Grade 12 Math Quiz",
+            "questions": [
+                {
+                    "question": "What is the sum of the arithmetic sequence 2, 5, 8, ..., 29?",
+                    "options": [
+                        "155",
+                        "165",
+                        "175",
+                        "185"
+                    ],
+                    "answer": 1,
+                    "topic": "Sequences and Series"
+                },
+                {
+                    "question": "What is the limit of (x^2 - 1) / (x - 1) as x approaches 1?",
+                    "options": [
+                        "0",
+                        "1",
+                        "2",
+                        "Undefined"
+                    ],
+                    "answer": 2,
+                    "topic": "Introduction to Calculus"
+                },
+                {
+                    "question": "What is the derivative of f(x) = 3x^2 + 2x - 1?",
+                    "options": [
+                        "f'(x) = 6x + 2",
+                        "f'(x) = 3x^2 + 2",
+                        "f'(x) = 6x^2 + 2x",
+                        "f'(x) = 3x + 2"
+                    ],
+                    "answer": 0,
+                    "topic": "Introduction to Calculus"
+                },
+                {
+                    "question": "Which measure of dispersion is always non-negative?",
+                    "options": [
+                        "Variance",
+                        "Standard Deviation",
+                        "Range",
+                        "All of the above"
+                    ],
+                    "answer": 3,
+                    "topic": "Statistics"
+                },
+                {
+                    "question": "What is the correlation coefficient between two variables that have a perfect positive linear relationship?",
+                    "options": [
+                        "0",
+                        "-1",
+                        "1",
+                        "0.5"
+                    ],
+                    "answer": 2,
+                    "topic": "Statistics"
+                },
+                {
+                    "question": "In linear programming, what does the feasible region represent?",
+                    "options": [
+                        "The optimal solution",
+                        "The set of all possible solutions",
+                        "The objective function",
+                        "The constraints"
+                    ],
+                    "answer": 1,
+                    "topic": "Introduction to Linear Programming"
+                },
+                {
+                    "question": "What is the purpose of the simplex method in linear programming?",
+                    "options": [
+                        "To find the feasible region",
+                        "To graph the constraints",
+                        "To find the optimal solution",
+                        "To define the objective function"
+                    ],
+                    "answer": 2,
+                    "topic": "Introduction to Linear Programming"
+                },
+                {
+                    "question": "What is the formula for calculating simple interest?",
+                    "options": [
+                        "I = P * r * t",
+                        "I = P * (1 + r)^t",
+                        "I = P / (r * t)",
+                        "I = P + r * t"
+                    ],
+                    "answer": 0,
+                    "topic": "Mathematical Applications in Business"
+                },
+                {
+                    "question": "In the context of supply and demand, what happens to the equilibrium price when demand increases and supply remains constant?",
+                    "options": [
+                        "Price decreases",
+                        "Price increases",
+                        "Price remains the same",
+                        "Price becomes zero"
+                    ],
+                    "answer": 1,
+                    "topic": "Mathematical Applications in Business"
+                },
+                {
+                    "question": "What is the break-even point in a business context?",
+                    "options": [
+                        "The point where revenue exceeds costs",
+                        "The point where costs exceed revenue",
+                        "The point where revenue equals costs",
+                        "The point where profit is maximized"
+                    ],
+                    "answer": 2,
+                    "topic": "Mathematical Applications in Business"
+                }
+            ]
+        }
+    ]
+}

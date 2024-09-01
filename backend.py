@@ -7,6 +7,7 @@ CORS(app)
 prolog = Prolog()
 
 prolog.consult("./inference_engine/learning_path.pl")
+prolog.consult("./explanation/module_activation.pl")
 
 
 @app.route("/api/unlocked_modules", methods=["GET"])

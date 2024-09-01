@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Math - Module Content</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Bai Jamjuree";
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .container>div {
+            margin: 20px;
+            font-size: 17px;
+        }
+
+        .container>div>h1 {
+            margin: 10px 0 50px 0;
+        }
+
+        .slide {
+            padding: 20px;
+            display: none;
+            height: 400px;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .note {
+            font-family: "Manrope";
+            font-weight: 500;
+
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .exercise {
+            font-family: "Manrope";
+            font-weight: 500;
+
+            margin-bottom: 20px;
+        }
+
+        .exercise>p {
+            margin: 30px 0;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid #cecdcd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .navigation {
+            width: 60%;
+            margin: 0 0 40px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #prevBtn {
+            background-color: #2c3e50b7;
+        }
+
+        #nextBtn {
+            background-color: #2c3e50;
+        }
+
+        button {
+            font-family: "Manrope";
+            font-weight: 500;
+            font-size: 15px;
+
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="slides-container">
+        <!-- Slides will be dynamically injected here -->
+    </div>
+
+    <div class="navigation">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        // Generate slides dynamically
+        const slidesContainer = document.getElementById('slides-container');
+
+        data.notes.forEach(note => {
+            const slide = document.createElement('div');
+            slide.className = 'slide';
+            slide.id = note.id;
+            slide.innerHTML = `
+        <h1>${note.title}</h1>
+        <div class="note">
+            <p>${note.content}</p>
+        </div>
+    `;
+            slidesContainer.appendChild(slide);
+        });
+
+        data.exercises.forEach((exercise, exerciseIndex) => {
+            exercise.questions.forEach((question, questionIndex) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                slide.id = `exercise${exerciseIndex + 1}_question${questionIndex + 1}`;
+                slide.innerHTML = `
+            <h1>${exercise.title}</h1>
+            <div class="exercise">
+                <p>${question.question}</p>
+                <div class="options">
+                    ${question.options.map((option, optionIndex) => `
+                        <label class="option">
+                            <input type="radio" name="question${exerciseIndex}_${questionIndex}" value="${optionIndex}">
+                            ${option}
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+                slidesContainer.appendChild(slide);
+            });
+        });
+
+        // Show the first slide
+        const slides = document.querySelectorAll('.slide');
+        slides[0].classList.add('active');
+
+        // Slide navigation logic
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+    </script>
+    <script src="assess_student.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 % Mastery Level: 0 to 100
 
-% Initial mastery level is set through an initial diagnostic test.
+:- dynamic mastery_level/2.
+
 % Grade 9
 mastery_level('Further on Sets', 0).
 mastery_level('The Number System', 0).
@@ -34,3 +35,8 @@ mastery_level('Introduction to Calculus', 0).
 mastery_level('Statistics', 0).
 mastery_level('Introduction to Linear Programming', 0).
 mastery_level('Mathematical Applications in Business', 0).
+
+
+update_mastery_level(Topic, NewLevel) :-
+    retract(mastery_level(Topic, _)),
+    assert(mastery_level(Topic, NewLevel)).

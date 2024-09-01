@@ -1,5 +1,5 @@
 :- consult('../knowledge_base/module_dependency.pl').
-:- consult('../knowledge_base/student_progress.pl').
+:- consult('../knowledge_acquisition/student_progress.pl').
 
 % Define a threshold for identifying modules needing attention
 mastery_threshold(50).
