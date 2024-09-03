@@ -1,9 +1,9 @@
 :- consult('../knowledge_acquisition/student_progress.pl').
 
 % Updating the mastery level and persisting it
-update_mastery_level(Topic, NewLevel) :-
-    retract(mastery_level(Topic, _)),
-    assert(mastery_level(Topic, NewLevel)),
+update_mastery_level(Module, NewLevel) :-
+    retract(mastery_level(Module, _)),
+    assert(mastery_level(Module, NewLevel)),
     save_knowledge_base.
 
 % Save the knowledge base to a file

@@ -1,0 +1,122 @@
+body {
+    font-family: "Bai Jamjuree";
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+#progress {
+    font-size: 17px;
+    font-weight: 500;
+
+    margin: 20px;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container>div {
+    margin: 20px;
+    font-size: 17px;
+}
+
+.container>div>h1 {
+    margin: 10px 0 50px 0;
+}
+
+.slide {
+    padding: 20px;
+    display: none;
+    height: 400px;
+}
+
+.slide.active {
+    display: block;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+.note {
+    font-family: "Manrope";
+    font-weight: 500;
+
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.exercise {
+    font-family: "Manrope";
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.exercise>p {
+    margin: 30px 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #cecdcd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.navigation {
+    width: 60%;
+    margin: 0 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#prevBtn {
+    background-color: #2c3e50b7;
+}
+
+#nextBtn {
+    background-color: #2c3e50;
+}
+
+button {
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 15px;
+
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #34495e;
+}
